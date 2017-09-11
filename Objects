@@ -1,0 +1,39 @@
+<script>
+var myObject = new Object();
+myObject.<key> = <value>;
+myObject.foo = 'bar';
+myObject.isObject = true;
+myObject.count = 0;
+</script>
+
+myObject is an Object
+foo is it's property
+'bar' is the property's value
+
+<script>
+myObject.getCount = function() { return myObject.count; };
+</script>
+
+getCount is a function which is a property of myObject of type Function()
+A method is a function associated with an object, or, simply put, a method is a property of an object that is a function.
+Methods are defined the way normal functions are defined, except that they have to be assigned as the property of an object.
+
+<script>
+var Person = function(living, age, gender) {
+this.living = living;
+this.age = age;
+this.gender = gender;
+this.getGender = function () { return this.gender; };
+}
+var someone = new Person(true, 23, 'female');
+console.log(someone);
+// OR
+function Car(make, model, year, owner) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+  this.owner = owner;
+}
+var car1 = new Car('Eagle', 'Talon TSi', 1993, rand);
+var car2 = new Car('Nissan', '300ZX', 1992, ken);
+</script>
